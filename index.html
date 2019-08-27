@@ -382,6 +382,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blessedbin.com/2019/08/27/Java-获取文件拓展名/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Blessedbin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blessedbin Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/27/Java-获取文件拓展名/" class="post-title-link" itemprop="url">Java-获取文件拓展名</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-27 15:36:54 / 修改时间：15:40:23" itemprop="dateCreated datePublished" datetime="2019-08-27T15:36:54+08:00">2019-08-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Java获取文件拓展名的三种方式"><a href="#Java获取文件拓展名的三种方式" class="headerlink" title="Java获取文件拓展名的三种方式"></a>Java获取文件拓展名的三种方式</h2><h3 id="原生Java方式"><a href="#原生Java方式" class="headerlink" title="原生Java方式"></a>原生Java方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public Optional&lt;String&gt; getExtensionByStringHandling(String filename) &#123;</span><br><span class="line">    return Optional.ofNullable(filename)</span><br><span class="line">      .filter(f -&gt; f.contains(&quot;.&quot;))</span><br><span class="line">      .map(f -&gt; f.substring(filename.lastIndexOf(&quot;.&quot;) + 1));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>特殊情况：  </p>
+<ul>
+<li>没有拓展名：该函数返回空字符串</li>
+<li>只有拓展名（例如.gitignore）：返回gitignore</li>
+</ul>
+<h3 id="使用Apache-Commons-IO包下的FilenameUtils-getExtension工具"><a href="#使用Apache-Commons-IO包下的FilenameUtils-getExtension工具" class="headerlink" title="使用Apache Commons IO包下的FilenameUtils.getExtension工具"></a>使用Apache Commons IO包下的FilenameUtils.getExtension工具</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String getExtensionByApacheCommonLib(String filename) &#123;</span><br><span class="line">    return FilenameUtils.getExtension(filename);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用Guava-Library"><a href="#使用Guava-Library" class="headerlink" title="使用Guava Library"></a>使用Guava Library</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.google.guava&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;guava&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;24.1.1-jre&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String getExtensionByGuava(String filename) &#123;</span><br><span class="line">    return Files.getFileExtension(filename);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>原文链接：<a href="https://www.baeldung.com/java-file-extension" target="_blank" rel="noopener">https://www.baeldung.com/java-file-extension</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blessedbin.com/2019/05/13/Python-日期时间相关操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -569,7 +723,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -607,7 +761,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

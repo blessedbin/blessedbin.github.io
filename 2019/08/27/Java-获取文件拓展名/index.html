@@ -94,21 +94,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://blessedbin.com/tags/index.html">
+  <meta name="description" content="Java获取文件拓展名的三种方式原生Java方式12345public Optional&amp;lt;String&amp;gt; getExtensionByStringHandling(String filename) &amp;#123;    return Optional.ofNullable(filename)      .filter(f -&amp;gt; f.contains(&amp;quot;.&amp;quot;))">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java-获取文件拓展名">
+<meta property="og:url" content="http://blessedbin.com/2019/08/27/Java-获取文件拓展名/index.html">
 <meta property="og:site_name" content="Blessedbin Blog">
+<meta property="og:description" content="Java获取文件拓展名的三种方式原生Java方式12345public Optional&amp;lt;String&amp;gt; getExtensionByStringHandling(String filename) &amp;#123;    return Optional.ofNullable(filename)      .filter(f -&amp;gt; f.contains(&amp;quot;.&amp;quot;))">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-29T09:44:18.459Z">
+<meta property="og:updated_time" content="2019-08-27T07:40:23.037Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="Java-获取文件拓展名">
+<meta name="twitter:description" content="Java获取文件拓展名的三种方式原生Java方式12345public Optional&amp;lt;String&amp;gt; getExtensionByStringHandling(String filename) &amp;#123;    return Optional.ofNullable(filename)      .filter(f -&amp;gt; f.contains(&amp;quot;.&amp;quot;))">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blessedbin.com/tags/">
+  <link rel="canonical" href="http://blessedbin.com/2019/08/27/Java-获取文件拓展名/">
 
 
 
@@ -118,7 +122,7 @@
   };
 </script>
 
-  <title>tags | Blessedbin Blog</title>
+  <title>Java-获取文件拓展名 | Blessedbin Blog</title>
   
 
 
@@ -252,7 +256,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -362,103 +366,189 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blessedbin.com/2019/08/27/Java-获取文件拓展名/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Blessedbin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blessedbin Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
+          <h1 class="post-title" itemprop="name headline">Java-获取文件拓展名
+
               
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-              目前共计 2 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              
-                <a href="/tags/Java/" style="font-size: 12px; color: #ccc">Java</a> <a href="/tags/python/" style="font-size: 12px; color: #ccc">python</a>
-              
-            </div>
-          </div>
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-27 15:36:54 / 修改时间：15:40:23" itemprop="dateCreated datePublished" datetime="2019-08-27T15:36:54+08:00">2019-08-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="Java获取文件拓展名的三种方式"><a href="#Java获取文件拓展名的三种方式" class="headerlink" title="Java获取文件拓展名的三种方式"></a>Java获取文件拓展名的三种方式</h2><h3 id="原生Java方式"><a href="#原生Java方式" class="headerlink" title="原生Java方式"></a>原生Java方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public Optional&lt;String&gt; getExtensionByStringHandling(String filename) &#123;</span><br><span class="line">    return Optional.ofNullable(filename)</span><br><span class="line">      .filter(f -&gt; f.contains(&quot;.&quot;))</span><br><span class="line">      .map(f -&gt; f.substring(filename.lastIndexOf(&quot;.&quot;) + 1));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>特殊情况：  </p>
+<ul>
+<li>没有拓展名：该函数返回空字符串</li>
+<li>只有拓展名（例如.gitignore）：返回gitignore</li>
+</ul>
+<h3 id="使用Apache-Commons-IO包下的FilenameUtils-getExtension工具"><a href="#使用Apache-Commons-IO包下的FilenameUtils-getExtension工具" class="headerlink" title="使用Apache Commons IO包下的FilenameUtils.getExtension工具"></a>使用Apache Commons IO包下的FilenameUtils.getExtension工具</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String getExtensionByApacheCommonLib(String filename) &#123;</span><br><span class="line">    return FilenameUtils.getExtension(filename);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用Guava-Library"><a href="#使用Guava-Library" class="headerlink" title="使用Guava Library"></a>使用Guava Library</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.google.guava&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;guava&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;24.1.1-jre&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public String getExtensionByGuava(String filename) &#123;</span><br><span class="line">    return Files.getFileExtension(filename);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>原文链接：<a href="https://www.baeldung.com/java-file-extension" target="_blank" rel="noopener">https://www.baeldung.com/java-file-extension</a></li>
+</ul>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/13/Python-日期时间相关操作/" rel="next" title="Python 日期时间相关操作">
+                <i class="fa fa-chevron-left"></i> Python 日期时间相关操作
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -478,8 +568,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -559,6 +658,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java获取文件拓展名的三种方式"><span class="nav-number">1.</span> <span class="nav-text">Java获取文件拓展名的三种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原生Java方式"><span class="nav-number">1.1.</span> <span class="nav-text">原生Java方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Apache-Commons-IO包下的FilenameUtils-getExtension工具"><span class="nav-number">1.2.</span> <span class="nav-text">使用Apache Commons IO包下的FilenameUtils.getExtension工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Guava-Library"><span class="nav-number">1.3.</span> <span class="nav-text">使用Guava Library</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -703,6 +819,8 @@
   
   
 
+
+  
 
 
   
